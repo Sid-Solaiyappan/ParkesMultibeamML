@@ -76,26 +76,3 @@ for noise_h5 in no_signal:
                     im.save(os.path.join(savedir,'img_{0:06}.png'.format(sample_num)))
     except:
         pass
-    
-#     fmin,fmax = float(header[-3].split(' ')[-1]),float(header[-2].split(' ')[-1])
-    
-#     if fmin>1359.5-5 and fmin<1359.5+5 and fmax>1513.5-5 and fmax<1513.5+5:
-        
-#         for i in range(140):
-#             f_start = np.random.uniform(fmin,fmax-diff)
-#             f_stop = f_start+diff
-#             print(f"sample : {sample_num}\nf_start: {f_start}\nf_stop : {f_stop}\n{noise_h5}")
-
-#             obs = bl.Waterfall(noise_h5,f_start=f_start,f_stop=f_stop)
-
-#             frame = stg.Frame(waterfall = obs)
-#     #         fig = plt.figure(figsize=(7, 4))
-#     #         frame.bl_plot()
-#             data = frame.get_data()
-#     #         plt.show()
-#             sample_num+=1
-#             img = plt.imshow(frame.data,aspect='auto',interpolation='none').make_image(renderer=None, unsampled=False)[0][:,:,:3]
-#             im = Image.fromarray(img)#.convert('L')
-#             im.save('highF_noSignal/img_{0:06}.png'.format(sample_num))
-
-# #             np.save("highF_noSignal/img_{0:06}.npy".format(sample_num),data,allow_pickle=True)
