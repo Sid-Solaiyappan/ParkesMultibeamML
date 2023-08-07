@@ -42,7 +42,7 @@ for inj_h5 in inj_signal:
         fmin,fmax = float(header[-3].split(' ')[-1]),float(header[-2].split(' ')[-1])
         nreal_tsamps = int(header[-7].split(' ')[-1])
         if nreal_tsamps==20 or nreal_tsamps==19:
-            if fmin>1359.5-5 and fmin<1359.5+5 and fmax>1513.5-5 and fmax<1513.5+5:
+            if fmin>1359.5-5 and fmin<1359.5+5 and fmax>1513.5-5 and fmax<1513.5+5: #set to upper half of the freqeuncy band
 
                 for i in range(samples_per_h5):
                     f_start = np.random.uniform(fmin,fmax-diff)
